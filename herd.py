@@ -1,23 +1,24 @@
 from ntpath import join
 from dinosaur import Dinosaur
 
-dino1 = Dinosaur('Lil Tator',30 )
-
-
-
 class Herd:
 
     def __init__(self):
-        self.dinosaurs = [dino1]
-        print(dino1.name) 
-        print('Attack Power:', dino1.attack_power, 'Health:', dino1.health)
-        
-        
-
-        
-
+        self.dino_list = []
+        self.create_herd()
+       
     def create_herd(self):
-        print(self.dinosaurs)
+        dino_one = Dinosaur('Lil Tater', 25 )
+        # dino_two = Dinosaur('Milkshakes', 20)
+        # dino_three = Dinosaur('Clever Girl', 25)
+        self.dino_list.append(dino_one)
+        # self.dino_list.append(dino_two)
+        # self.dino_list.append(dino_three)
+
+
+        
+
+       
 
 
 

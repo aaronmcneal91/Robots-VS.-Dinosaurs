@@ -1,14 +1,21 @@
 from robot import Robot
-robo1 = Robot('Claptrap')
+
 
 class Fleet:
 
     def __init__(self):
-        self.robots = [robo1]
-        print(robo1.name) 
-        print('Lightsaber Power:25', robo1.health, 'Health:', robo1.health)
+        self.robot_list = []
+        self.create_fleet()
 
     def create_fleet(self):
-       print(self.robots)
+        robot_one = Robot('Bender')
+        # robot_two = Robot('Optimus')
+        # robot_three = Robot('Claptrap')
+        self.robot_list.append(robot_one)
+        # self.robot_list.append(robot_two)
+        # self.robot_list.append(robot_three)
+
+
+    
 
 

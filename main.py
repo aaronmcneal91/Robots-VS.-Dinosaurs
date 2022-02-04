@@ -1,5 +1,3 @@
-from herd import Herd
-from fleet import Fleet
-
-Fleet()
-Herd()
+from battlefield import Battlefield
+battlefield = Battlefield()
+battlefield.run_game()
