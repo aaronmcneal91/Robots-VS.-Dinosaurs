@@ -1,8 +1,5 @@
-# setup robo turn using dino turn as an example
-# we then need to make a while loop in battle() 
-# while length of fleet list and herd list is >0 
-# test!
-# when you add robo turn and dino turn into battle() call battle in run_game
+
+from lib2to3.pgen2.token import GREATEREQUAL
 from random import Random
 from fleet import Fleet
 from herd import Herd
@@ -10,14 +7,17 @@ from herd import Herd
 class Battlefield:
 
     def __init__(self):
-        self.fleet = Fleet()  #  TESTED
-        self.herd = Herd()     # TESTED
+        self.fleet = Fleet() 
+        self.herd = Herd()     
 
     def run_game(self): 
         print('WELCOME TO PREHISTORIC FUTURISTIC HELL!!!')
         self.battle()
-        # self.dino_turn()     
-        # self.robo_turn()    
+
+
+    
+        
+   
         
         
         
@@ -27,17 +27,59 @@ class Battlefield:
         
     
         
-    def battle(self): # while dino and robot list are greater than 0 it just continues to loop over dino_turn and robot_turn
-        self.dino_turn
-       
-        while self.fleet.robot_list.len >= 0:
-            self.dino_turn
-        while self.herd.dino_list.len >= 0:
+    def battle(self): 
+        self.dino_turn()
+        self.robo_turn()
+        # while len in self.fleet.robot_list > 0:
+        #     self.dino_turn()
+        # while len in self.herd.dino_list > 0:
+        #     self.dino_turn()
+        # if len in self.fleet.robot_list < 0:
+        #     self.display_winner()
+        # if len in self.herd.dino_list < 0:
+        #     self.display_winner()
+
+
+
+
+
+
+
+        while len(self.fleet.robot_list) >= 0:
             self.dino_turn()
-        if self.fleet.robot_list <= len(0):
+            self.robo_turn()
+        if len(self.herd.dino_list) >= 0:
+            self.dino_turn()
+            self.robo_turn()
+        else:
             self.display_winner()
-        if self.herd.dino_list <= len(0):
-            self.display_winner
+        
+
+        
+        
+            
+        
+
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        # self.dino_turn
+       
+        # while self.fleet.robot_list.len[0] >= 0:
+        #     self.dino_turn
+        # while self.herd.dino_list.len >= 0:
+        #     self.dino_turn()
+        # if self.fleet.robot_list <= len(0):
+        #     self.display_winner()
+        # if self.herd.dino_list <= len(0):
+        #     self.display_winner
            
 
 
@@ -55,6 +97,7 @@ class Battlefield:
         user_robot_choice = int(input())
         self.herd.dino_list[user_dino_choice].attack(self.fleet.robot_list[user_robot_choice])
         
+        
          
     def robo_turn(self): 
         print("It's the Robot's turn!!" "Who would you like to attack with?")
@@ -64,6 +107,7 @@ class Battlefield:
         self.show_dino_options()
         user_dino_choice = int(input())
         self.fleet.robot_list[user_robo_choice].attack(self.herd.dino_list[user_dino_choice])
+        
         
 
         
